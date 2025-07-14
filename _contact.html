@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Information</title>
+    <!-- might consider building a script to determine if I may be available on a specific day-->
+    <script>
+        
+    </script>
+</head>
+<body>
+    <main>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="_about.html">About Me.</a>
+            <a href="_contact.html">Contact Information.</a>
+            <a href="_experience.html">Experience.</a>
+        </nav>
+        <section>
+            <hgroup>
+                <h1>Contact Information</h1>
+                <p>If you would like to get in touch, please feel free to reach out via the contact form below or reach me directly.</p>
+                <p>Email: jonathannoj0186@gmail.com</p>
+            </hgroup>
+        </section>
+
+        <table>
+            <caption>This week's schedule.</caption>
+            <colgroup>
+                <col style="width: 70px">
+                <col style="width: 70px">
+                <col style="width: 70px">
+                <col style="width: 70px">
+                <col style="width: 70px">
+                <col style="width: 70px">
+                <col style="width: 70px">
+            </colgroup>
+            <tr>
+                <th>Mon</th>
+                <th>Tues</th>
+                <th>Wed</th>
+                <th>Thurs</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+            </tr>
+            <tr>
+                <td>busy</td>
+                <td>busy</td>
+                <td>busy</td>
+                <td>busy</td>
+                <td>busy</td>
+                <td>not busy</td>
+                <td>not busy</td>
+            </tr>
+        </table>
+
+        <p>If you have any comments you may fill out this form.</p>
+        <form>
+            <fieldset>
+                <legend>Personal Information</legend>
+
+                <label for="name"> Name: </label>
+                <input type="text" name="name" id="name" autofocus>
+                <br>
+
+                <label for="phone"> Phone number: </label>
+                <input type="tel" name="phone" id="phone" autocomplete="on">
+                <br>
+
+                <label for="email"> Email: </label>
+                <input type="email" name="email" id="email" autocomplete="on">
+                <br>
+
+                <label for="state"> State: </label>
+                <input type="text" name="state" id="state" autocomplete="on">
+                <br>
+
+                <label for="day">Choose a day:</label>
+                <select name="day" id="day">
+                    <optgroup label="Weekdays">
+                        <option value="mon">Monday</option>
+                        <option value="tue">Tuesday</option>
+                        <option value="wed">Wednesday</option>
+                        <option value="thu">Thursday</option>
+                        <option value="fri">Friday</option>
+                    </optgroup>
+                    <optgroup label="Weekends">
+                        <option value="sat">Saturday</option>
+                        <option value="sun">Sunday</option>
+                    </optgroup>
+                </select>
+                <br>
+
+                <label for="time">Enter a time.</label>
+                <input list="time-categories" name="time" id="time">
+                <datalist id="time-categories">
+                    <option value="Morning"></option>
+                    <option value="Noon"></option>
+                    <option value="Afternoon"></option>
+                    <option value="Evening"></option>
+                </datalist>
+            </fieldset>
+
+            <p>Write any comments here.</p>
+            <textarea name="comments" id="comments" rows="20" cols="100"></textarea>
+
+        </form>
+    </main>
+</body>
+</html>
