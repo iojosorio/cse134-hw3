@@ -4,38 +4,68 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Information</title>
-    <!-- might consider building a script to determine if I may be available on a specific day-->
-    <script>
-        
-    </script>
+    <link rel="stylesheet" href="main.css">
+    <style> 
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 0.1rem;
+            text-align: center;
+        }
+        th {
+            background-color: black;
+        }
+        label {
+            display: inline-block;
+            width: 10rem;
+            margin-bottom: 1rem;
+        }
+        input, select {
+            margin-bottom: 1rem;
+            border: 2px solid black;
+            background-color: white;
+            &:focus {
+                border: 2px solid aqua;
+                outline: 2px solid blue;
+                background-color: black;
+                color: white;
+                transform: scale(1.03);
+                transition: all 0.3s ease-in;
+            }
+        }
+        textarea {
+            width: 50%;
+            height: 10rem;
+            margin-bottom: 1rem;
+        }
+        button {
+            padding: 0.5rem 1rem;
+        }
+    </style>
 </head>
+
 <body>
-    <main>
+    <header>
+        <h1>Contact Information</h1>
         <nav>
             <a href="index.html">Home</a>
-            <a href="_about.html">About Me.</a>
-            <a href="_contact.html">Contact Information.</a>
-            <a href="_experience.html">Experience.</a>
+            <a href="_about.html">About Me</a>
+            <a href="_contact.html">Contact Me</a>
+            <a href="_experience.html">Experience</a>
         </nav>
-        <section>
-            <hgroup>
-                <h1>Contact Information</h1>
-                <p>If you would like to get in touch, please feel free to reach out via the contact form below or reach me directly.</p>
-                <p>Email: jonathannoj0186@gmail.com</p>
-            </hgroup>
-        </section>
-
+    </header>
+    <hr>
+    <main>
+        <hgroup>
+            <h2>Contact Information</h2>
+            <p>If you would like to get in touch, you may fill the form or contact me directly. The table below shows my availability throughout the week.</p>
+        </hgroup>
         <table>
             <caption>This week's schedule.</caption>
-            <colgroup>
-                <col style="width: 70px">
-                <col style="width: 70px">
-                <col style="width: 70px">
-                <col style="width: 70px">
-                <col style="width: 70px">
-                <col style="width: 70px">
-                <col style="width: 70px">
-            </colgroup>
+
             <tr>
                 <th>Mon</th>
                 <th>Tues</th>
@@ -55,28 +85,22 @@
                 <td>not busy</td>
             </tr>
         </table>
-
         <p>If you have any comments you may fill out this form.</p>
         <form>
             <fieldset>
                 <legend>Personal Information</legend>
-
                 <label for="name"> Name: </label>
                 <input type="text" name="name" id="name" autofocus>
                 <br>
-
                 <label for="phone"> Phone number: </label>
                 <input type="tel" name="phone" id="phone" autocomplete="on">
                 <br>
-
                 <label for="email"> Email: </label>
                 <input type="email" name="email" id="email" autocomplete="on">
                 <br>
-
-                <label for="state"> State: </label>
-                <input type="text" name="state" id="state" autocomplete="on">
-                <br>
-
+            </fieldset>
+            <fieldset>
+                <legend>Availability</legend>
                 <label for="day">Choose a day:</label>
                 <select name="day" id="day">
                     <optgroup label="Weekdays">
@@ -92,7 +116,6 @@
                     </optgroup>
                 </select>
                 <br>
-
                 <label for="time">Enter a time.</label>
                 <input list="time-categories" name="time" id="time">
                 <datalist id="time-categories">
@@ -102,11 +125,22 @@
                     <option value="Evening"></option>
                 </datalist>
             </fieldset>
-
-            <p>Write any comments here.</p>
-            <textarea name="comments" id="comments" rows="20" cols="100"></textarea>
-
+            <fieldset>
+                <legend>Comments</legend>
+                <label for="comments">Comments:</label>
+                <br>
+                <textarea name="comments" id="comments"></textarea>
+            </fieldset>
+            <br>
+            <button type="submit">Submit</button>
         </form>
     </main>
+    <footer>
+        <address>
+            Jonathan Osorio <br>
+            jonathannoj0186@gmail.com <br>
+            619.885.6584
+        </address>
+    </footer>
 </body>
-</html>
+</html> 
