@@ -1,17 +1,35 @@
 :root {
-    --text-color: white;
     --animation-duration: 0.3s;
+    --font-size: clamp(1rem, 2vw, 1.3rem);
+    --padding: 2rem;
     --transition-timing: ease-in;
+    --text-color: white;
 }
-
 body {
+    header, main, footer {
+        padding: var(--padding);
+    }
     background-color: purple;
     color: var(--text-color);
-    h1 {
-        background-color: white;
-        color: black;
-        padding: 0.1rem;
-        text-align: center;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto 1fr auto;
+	grid-template-areas:
+        "header"
+        "main"
+        "footer";
+}
+header {
+    background-color: black;
+	color: var(--text-color);
+	text-align: center;
+	grid-area: header;
+	h1 {
+		background-color: white;
+		color: black;
+		font-size: var(--font-size);
+		padding: 0.1rem;
+		text-align: center;
     }
     nav {
         display: grid;
@@ -20,7 +38,7 @@ body {
         text-align: center;
         a {
             color: var(--text-color);
-            font-size: 1.5rem;
+            font-size: var(--font-size);
         }
         & a:hover {
             transform:scale(1.03);
@@ -30,19 +48,16 @@ body {
             transition-timing-function: var(--transition-timing);
         }
     }
-    p {
-        font-size: 1.2rem;
-        line-height: 1.5;
-    }
-    main {
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-    }
-    footer {
-        background-color: black;
-        text-align: center;
-    }
+}
+main {
+	color: var(--text-color);
+	grid-area: main;
+}
+footer {
+	background: black;
+	color: var(--text-color);
+    font-size: clamp(0.7rem, 2vw, 1rem);
+	text-align: center;
+	grid-area: footer;
+
 }
