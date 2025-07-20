@@ -10,14 +10,13 @@
             border-collapse: collapse;
             width: 100%;
         }
-        th, td {
+        td {
             border: 1px solid black;
-            font-size: clamp(1rem, 2vw, 1.3rem);
-            padding: 0.1rem;
             text-align: center;
         }
         th {
             background-color: black;
+            border: 1px solid red;
         }
         label {
             display: inline-block;
@@ -25,25 +24,22 @@
             margin-bottom: 1rem;
         }
         input, select {
-            margin-bottom: 1rem;
             border: 2px solid black;
             background-color: white;
+            color: black;
+            outline: 2px solid black;
             &:focus {
                 border: 2px solid aqua;
-                outline: 2px solid blue;
                 background-color: black;
                 color: white;
+                outline: 2px solid blue;
                 transform: scale(1.03);
                 transition: all 0.3s ease-in;
             }
         }
         textarea {
-            width: 100%;
             height: 10rem;
-            margin-bottom: 1rem;
-        }
-        button {
-            padding: 0.5rem 1rem;
+            width: 100%;
         }
     </style>
 </head>
@@ -58,79 +54,96 @@
             <a href="_experience.html">Experience</a>
         </nav>
     </header>
-    <hr>
     <main>
-        <p>If you would like to get in touch, you may fill the form or contact me directly. The table below shows my availability throughout the week.</p>
-        <table>
-            <caption style="font-size: clamp(1rem, 2vw, 1.3rem)">This week's schedule.</caption>
-            <tr>
-                <th>Mon</th>
-                <th>Tues</th>
-                <th>Wed</th>
-                <th>Thurs</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                <th>Sun</th>
-            </tr>
-            <tr>
-                <td>busy</td>
-                <td>busy</td>
-                <td>busy</td>
-                <td>busy</td>
-                <td>busy</td>
-                <td>not busy</td>
-                <td>not busy</td>
-            </tr>
-        </table>
-        <p>If you have any comments you may fill out this form.</p>
-        <form>
-            <fieldset>
-                <legend>Personal Information</legend>
-                <label for="name"> Name: </label>
-                <input type="text" name="name" id="name" autofocus>
+        <section>
+            <h2>Contact Details</h2>
+            <p>Feel free to reach out to me using the information below.</p>
+            <address>
+                Jonathan Osorio <br>
+                jonathannoj0186@gmail.com <br>
+                @josorio.io <br>
+                619.885.6584
+            </address>
+        </section>
+
+        <section>
+            <h2>Availability</h2>
+            <p>The table below shows my availability throughout the week.</p>
+            <table>
+                <caption>This week's schedule.</caption>
+                <tr>
+                    <th>Sun</th>
+                    <th>Mon</th>
+                    <th>Tues</th>
+                    <th>Wed</th>
+                    <th>Thurs</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                </tr>
+                <tr>
+                    <td>not busy</td>
+                    <td>busy</td>
+                    <td>busy</td>
+                    <td>busy</td>
+                    <td>busy</td>
+                    <td>busy</td>
+                    <td>not busy</td>
+                </tr>
+            </table>
+        </section>
+
+        <section>
+            <h2>Contact Form</h2>
+            <p>Please fill out the form below to get in touch with me.</p>
+            <form>
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="name"> Name: </label>
+                    <input type="text" name="name" id="name">
+                    <br>
+                    <label for="phone"> Phone number: </label>
+                    <input type="tel" name="phone" id="phone" autocomplete="on">
+                    <br>
+                    <label for="email"> Email: </label>
+                    <input type="email" name="email" id="email" autocomplete="on">
+                    <br>
+                </fieldset>
+                <fieldset>
+                    <legend>Availability</legend>
+                    <label for="day">Choose a day:</label>
+                    <select name="day" id="day">
+                        <optgroup label="Weekdays">
+                            <option value="mon">Monday</option>
+                            <option value="tue">Tuesday</option>
+                            <option value="wed">Wednesday</option>
+                            <option value="thu">Thursday</option>
+                            <option value="fri">Friday</option>
+                        </optgroup>
+                        <optgroup label="Weekends">
+                            <option value="sat">Saturday</option>
+                            <option value="sun">Sunday</option>
+                        </optgroup>
+                    </select>
+                    <br>
+                    <label for="time">Enter a time.</label>
+                    <input list="time-categories" name="time" id="time">
+                    <datalist id="time-categories">
+                        <option value="Morning"></option>
+                        <option value="Noon"></option>
+                        <option value="Afternoon"></option>
+                        <option value="Evening"></option>
+                    </datalist>
+                </fieldset>
+                <fieldset>
+                    <legend>Comments</legend>
+                    <label for="comments">Comments:</label>
+                    <br>
+                    <textarea name="comments" id="comments"></textarea>
+                </fieldset>
                 <br>
-                <label for="phone"> Phone number: </label>
-                <input type="tel" name="phone" id="phone" autocomplete="on">
-                <br>
-                <label for="email"> Email: </label>
-                <input type="email" name="email" id="email" autocomplete="on">
-                <br>
-            </fieldset>
-            <fieldset>
-                <legend>Availability</legend>
-                <label for="day">Choose a day:</label>
-                <select name="day" id="day">
-                    <optgroup label="Weekdays">
-                        <option value="mon">Monday</option>
-                        <option value="tue">Tuesday</option>
-                        <option value="wed">Wednesday</option>
-                        <option value="thu">Thursday</option>
-                        <option value="fri">Friday</option>
-                    </optgroup>
-                    <optgroup label="Weekends">
-                        <option value="sat">Saturday</option>
-                        <option value="sun">Sunday</option>
-                    </optgroup>
-                </select>
-                <br>
-                <label for="time">Enter a time.</label>
-                <input list="time-categories" name="time" id="time">
-                <datalist id="time-categories">
-                    <option value="Morning"></option>
-                    <option value="Noon"></option>
-                    <option value="Afternoon"></option>
-                    <option value="Evening"></option>
-                </datalist>
-            </fieldset>
-            <fieldset>
-                <legend>Comments</legend>
-                <label for="comments">Comments:</label>
-                <br>
-                <textarea name="comments" id="comments"></textarea>
-            </fieldset>
-            <br>
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
     </main>
     <footer>
         <address>

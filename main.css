@@ -1,63 +1,71 @@
 :root {
     --animation-duration: 0.3s;
-    --font-size: clamp(1rem, 2vw, 1.3rem);
+    --font-size: clamp(0.6rem, 2vw, 1.3rem);
     --padding: 2rem;
-    --transition-timing: ease-in;
     --text-color: white;
+    --transition-timing: ease-in;
+    
 }
 body {
+    background-color: purple;
+    color: var(--text-color);
+    font-family: monospace;
+    font-size: var(--font-size);
     header, main, footer {
         padding: var(--padding);
     }
-    background-color: purple;
-    color: var(--text-color);
-	display: grid;
+    h1, h2 {
+		background-color: white;
+		color: black;
+		padding: 0.1rem;
+		text-align: center;
+    }
+    display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto 1fr auto;
 	grid-template-areas:
         "header"
         "main"
         "footer";
-    h1, h2 {
-		background-color: white;
-		color: black;
-		font-size: var(--font-size);
-		padding: 0.1rem;
-		text-align: center;
-    }
 }
 header {
     background-color: black;
-	color: var(--text-color);
 	text-align: center;
-	grid-area: header;
     nav {
+        a {
+            color: var(--text-color);
+            &:hover {
+                transform: scale(1.03);
+                color: aqua;
+                transition-property: all;
+                transition-duration: var(--animation-duration);
+                transition-timing-function: var(--transition-timing);
+            }
+        }
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 1rem;
-        text-align: center;
-        a {
-            color: var(--text-color);
-            font-size: var(--font-size);
-        }
-        & a:hover {
-            transform:scale(1.03);
-            color:aqua;
-            transition-property: all;
-            transition-duration: var(--animation-duration);
-            transition-timing-function: var(--transition-timing);
-        }
     }
+    grid-area: header;
 }
 main {
-	color: var(--text-color);
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    picture {
+        display: flex;
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
 	grid-area: main;
 }
 footer {
 	background: black;
 	color: var(--text-color);
-    font-size: clamp(0.7rem, 2vw, 1rem);
 	text-align: center;
 	grid-area: footer;
-
 }
