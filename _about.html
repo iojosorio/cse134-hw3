@@ -65,8 +65,16 @@
         <section>
             <p>I'm Jonathan Osorio. I'm from San Diego and I'm currently a student at the University of California, San Diego.</p>
             <picture>
-                <source srcset="./_images/up.jpg" type="image/jpg">
-                <img src="./_images/up.jpg" alt="An image of the Fallen Star atthe University of California, San Diego">
+                <source 
+                    srcset="./_images/up-400.webp 400w,
+                            ./_images/up-800.webp 800w,
+                            ./_images/up-1200.webp 1200w"
+                    sizes="(max-width: 600px) 400px,
+                            (max-width: 1000px) 800px,
+                            1200px"
+                    type="image/webp"
+                >
+                <img src="./_images/up.jpg" alt="An image of the Fallen Star at the University of California, San Diego directly from below.">
             </picture>
         </section>
         <section class="hobbies">
@@ -76,28 +84,65 @@
             <p>I like reading books too. I'm finished reading <cite>The Extra Ordinary Dissapointments of Leopold Berry</cite> and now I'm reading <cite>Dune: The Graphic Novel</cite>. Someday, I too hope to publish my own novel.</p>    
             <section class="books">
                 <picture class="books">
-                    <source srcset="./_images/dune.jpg" type="image/jpg">
-                    <img src="./_images/dune.jpg" alt="Dune: The Graphic Novel Cover">
+                    <source 
+                        srcset="./_images/dune-400.webp 400w,
+                                ./_images/dune-800.webp 800w,
+                                ./_images/dune-1200.webp 1200w"
+                        sizes="(max-width: 600px) 400px,
+                                (max-width: 1000px) 800px,
+                                1200px"
+                        type="image/webp"
+                    >
+                    <img src="./_images/dune.jpg" alt=
+                    "Dune: The Graphic Novel Cover. Cloked people stand at the edge of a cliff with two suns in the background and an orange fog covers the page." 
+                    loading="lazy">
                 </picture>
                 <picture class="books">
-                    <source srcset="./_images/leopold.jpg" type="image/jpg">
-                    <img src="./_images/leopold.jpg" alt="The Extra Ordinary Dissapointments of Leopold Berry Cover">
+                    <source 
+                        srcset="./_images/leopold-400.webp 400w,
+                                ./_images/leopold-800.webp 800w,
+                                ./_images/leopold-1200.webp 1200w"
+                        sizes="(max-width: 600px) 400px,
+                                (max-width: 1000px) 800px,
+                                1200px"
+                        type="image/webp"
+                    >
+                    <img src="./_images/leopold.jpg" alt=
+                    "The Extra Ordinary Dissapointments of Leopold Berry Cover.
+                    A robotic wolf with red eyes looks outward to the viewer." 
+                    loading="lazy">
                 </picture>
             </section>
 
             <h3>Chess</h3>
             <p>I'm a dedicated chess player. In high school, I was part of the chess club, and now I study and I play online. I'm currently learning the Catalan opening for white, and I'm looking for a new opening for black</p>
             <picture>
-                <source srcset="./_images/chess.jpg" type="image/jpg">
-                <img src="./_images/chess.jpg" alt="Chess Board with Pieces">
+                <source 
+                    srcset="./_images/chess-400.webp 400w,
+                            ./_images/chess-800.webp 800w,
+                            ./_images/chess-1200.webp 1200w"
+                    sizes="(max-width: 600px) 400px,
+                            (max-width: 1000px) 800px,
+                            1200px"
+                    type="image/webp"
+                >
+                <img src="./_images/chess.jpg" alt="image of a chess board with pieces on the side from an inner drawer within the board." loading="lazy">
             </picture>
 
             <h3>Violin</h3>
             <section>
                 <p>I'm a violin player too. One of my greatest experiences was playing in orchestra during high school. I even performed at the Rady Shell my last year in orchestra.</p>
                 <picture>
-                    <source srcset="./_images/violin.jpg" type="image/jpg">
-                    <img src="./_images/violin.jpg" alt="Violin Player in Orchestra">
+                    <source 
+                        srcset="./_images/violin-400.webp 400w,
+                                ./_images/violin-800.webp 800w,
+                                ./_images/violin-1200.webp 1200w"
+                        sizes="(max-width: 600px) 400px,
+                                (max-width: 1000px) 800px,
+                                1200px"
+                        type="image/webp"
+                    >
+                    <img src="./_images/violin.jpg" alt="image of a violin lying on top of music." loading="lazy">
                 </picture>
             </section>
         </section>
@@ -120,10 +165,27 @@
                 </film-list>
   
                 <film-cover>
-                    <picture class="planetoftheapesfilms" id="cover">
-                            <source srcset="./_images/conquest.png" type="image/png">
-                            <img src="./_images/conquest.png" alt="Film cover for the film Conquest of the Planet of the Apes.">
-                    </picture>
+                    <figure>
+                        <picture class="planetoftheapesfilms" id="cover">
+                            <source 
+                                srcset="./_images/conquest-400.webp 400w,
+                                        ./_images/conquest-800.webp 800w"
+                                sizes="(max-width: 600px) 400px,
+                                        (max-width: 1000px) 800px,
+                                        1200px"
+                                type="image/webp"
+                            >
+                            <img src="./_images/conquest.png" 
+                            alt=
+                            "The film cover, saturated in red, for the film: Conquest of the Planet of the Apes.
+                            Ceaser leads armed apes in a revolution.
+                            The revolt has begun!" 
+                            loading="lazy">
+                        </picture>
+                        <figcaption>
+                            <cite>Photo by Phantom City Creative - &copy; Mondo</cite>
+                        </figcaption>
+                    </figure>
                 </film-cover>
 
             </section>
